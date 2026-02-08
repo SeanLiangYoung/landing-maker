@@ -1,0 +1,45 @@
+{
+  "design_path": 2,
+  "product_name": "简历智能优化",
+  "output_folder": "tests/20250209-160500/",
+  "version": 1,
+  "brand_color": "#cbbfac",
+  "style": "清新素雅",
+  "sections": ["hero", "features", "pricing", "cta"],
+  "features": [
+    {
+      "title": "一键优化",
+      "desc": "上传简历，AI 立即分析并优化，无需等待"
+    },
+    {
+      "title": "职位定向优化",
+      "desc": "针对目标职位定制关键词与经历描述，提高通过率"
+    },
+    {
+      "title": "无限修改，按下载收费",
+      "desc": "反复修改直到满意，仅在最终下载时计费"
+    }
+  ],
+  "pricing": [
+    {
+      "name": "免费试用",
+      "price": "免费",
+      "highlight": "支持优化，不支持下载",
+      "cta": "立即体验"
+    },
+    {
+      "name": "标准版",
+      "price": "￥49",
+      "highlight": "可下载优化后简历 10 次",
+      "cta": "选择套餐",
+      "popular": false
+    },
+    {
+      "name": "专业版",
+      "price": "￥99",
+      "highlight": "不限下载次数",
+      "cta": "选择套餐",
+      "popular": true
+    }
+  ]
+}
