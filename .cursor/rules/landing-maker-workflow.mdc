@@ -24,6 +24,10 @@ alwaysApply: true
    - **路径 1**：设计大师 → 前端专家
    - **路径 2**：前端专家主导，直接实现
    - **路径 3**：用户提供参考 → 设计大师 → 前端专家实现
+5. **评分阶段**（生成完成后必须执行）：
+   - 主动调用评分 Agent（landing-scorer）
+   - 对本次生成的页面进行评分
+   - 将评分报告写入同目录下的 `rating.md`
 
 ## 关键点
 
@@ -31,3 +35,4 @@ alwaysApply: true
 - **demand.md**：记录用户需求，便于后续使用和沟通
 - **最终确认**：生成前向用户确认需求，用户同意后再开始
 - **输出**：`tests/YYYYMMDD-HHMMSS/`，初版 `landing.html`，调整后 `landing-v2.html` 等
+- **rating.md**：每次生成完成后，由评分 Agent 输出并写入评分报告

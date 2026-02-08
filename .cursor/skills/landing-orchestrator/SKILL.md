@@ -57,11 +57,13 @@ description: 入口 Agent，负责与用户沟通、澄清 Landing 页面需求�
    - **路径 1**：设计大师主导 → 产出设计规格 → 前端专家实现
    - **路径 2**：前端专家主导 → 依据内容与结构直接实现（可跳过设计大师单独产出规格）
    - **路径 3**：用户提供参考 → 设计大师参考后产出规格 → 前端专家实现
-6. **调整阶段**：用户提出修改时，更新 `demand.md`，判断改动类型并分发给对应 Agent
+6. **评分阶段**（每次生成完成后**必须执行**）：调用评分 Agent（landing-scorer）对本次生成的页面进行评分，将评分报告写入同目录下的 `rating.md`
+7. **调整阶段**：用户提出修改时，更新 `demand.md`，判断改动类型并分发给对应 Agent；调整后再次生成时，重复步骤 6 更新 `rating.md`
 
 ## 输出物
 
 - **demand.md**：用户需求文档，保存于 `tests/YYYYMMDD-HHMMSS/demand.md`，生成前必须创建且用户已最终确认
+- **rating.md**：每次生成完成后，由评分 Agent 产出并写入 `tests/YYYYMMDD-HHMMSS/rating.md`，记录本次页面的评分报告
 - **design_spec**：结构化设计规格，**必须含** `design_path: 1|2|3`
   - 路径 3 需含 `reference_url` 或 `reference_description`
   - **output_folder**：`tests/YYYYMMDD-HHMMSS/`（新上下文需生成新时间戳文件夹）

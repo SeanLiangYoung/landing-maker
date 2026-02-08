@@ -7,6 +7,7 @@
 | 入口 Agent | `landing-orchestrator` | 确认设计路径、收集需求、编排流程、管理迭代 |
 | 设计大师 | `landing-design-master` | 路径 1、3 主导设计，产出设计规格 |
 | 前端专家 | `landing-frontend-expert` | 路径 2 主导实现；路径 1、3 实现设计规格 |
+| 评分 Agent | `landing-scorer` | 按固定标准对页面打分，输出结构化评分报告 |
 
 **整合的设计 Skill**：
 - `frontend-design`：前端美学原则，避免泛化 AI 风格
@@ -28,8 +29,9 @@
 - "我要路径 1，做一个极简风格的产品页" → 纯创意
 - "路径 2，内容已经整理好了，帮我排成页面" → 内容工具
 - "路径 3，参考这个网站 [URL]，做一个类似风格的新品介绍页" → 参考+创意
+- "给 tests/20250209-160500/landing.html 打个分" → 评分 Agent
 
-输出到 `tests/YYYYMMDD-HHMMSS/` 目录：新上下文创建新文件夹，每个子文件夹含 `demand.md`（用户需求）和生成的页面。生成前会充分收集需求并做最终确认，用户同意后再开始。每次调整生成新文件（`landing.html`、`landing-v2.html` 等）。
+输出到 `tests/YYYYMMDD-HHMMSS/` 目录：新上下文创建新文件夹，每个子文件夹含 `demand.md`（用户需求）和生成的页面。**每次生成完成后**，评分 Agent 自动对页面评分，并将报告写入同目录下的 `rating.md`。生成前会充分收集需求并做最终确认，用户同意后再开始。每次调整生成新文件（`landing.html`、`landing-v2.html` 等）时，会重新评分并更新 `rating.md`。
 
 ---
 
