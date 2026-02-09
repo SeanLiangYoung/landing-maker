@@ -23,6 +23,7 @@
 ```
 frontend-expert/
 ├── README.md                    # 知识库说明文档
+├── CHANGELOG.md                 # 知识库变更日志
 ├── knowledge-dag.json          # DAG 结构定义（节点和边）
 ├── implementation-patterns/    # 实现模式知识
 │   ├── page-paradigms/        # 页面范式
@@ -56,5 +57,7 @@ frontend-expert/
 
 ## 知识库维护
 
+- **数据收集专家 Agent**：负责采集和精炼前端实现知识，持续丰富知识库
 - **项目复盘**：根据实际项目经验，持续优化知识库内容
 - **最佳实践积累**：将优秀的实现模式纳入知识库
+- **变更日志**：所有知识库更新都会记录在 `CHANGELOG.md` 中，包括新增、更新、删除的知识点和 DAG 变更

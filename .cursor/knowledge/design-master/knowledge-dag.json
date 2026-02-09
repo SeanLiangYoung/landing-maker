@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "设计大师知识库 DAG",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "设计大师 Agent 的 DAG 知识库，用于结构化存储和检索专业知识",
     "created_at": "2026-02-09",
     "updated_at": "2026-02-09"
@@ -226,6 +226,26 @@
       "dependencies": ["grid-system"],
       "examples": ["2×2网格", "3列网格"],
       "application": "根据功能数量选择网格布局，保持一致的间距"
+    },
+    {
+      "id": "feature-modular-display",
+      "name": "功能模块化展示",
+      "category": "layout-patterns.layout-types",
+      "description": "多个功能以独立模块形式展示，每个模块包含功能名称、特点描述和价值说明",
+      "tags": ["modular", "features", "display", "layout"],
+      "dependencies": ["card-layout", "consistent-spacing"],
+      "examples": ["夸克AI简历页面", "多产品功能展示"],
+      "application": "适合展示多个相关功能或产品，每个功能独立成模块，清晰展示特点和价值"
+    },
+    {
+      "id": "feature-benefit-combination",
+      "name": "特点+价值组合",
+      "category": "implementation-patterns.content-patterns",
+      "description": "功能描述采用特点+价值组合模式，先说明特点，再说明带来的价值",
+      "tags": ["content", "pattern", "feature", "benefit"],
+      "dependencies": [],
+      "examples": ["模型先进：基于阿里最强Qwen大模型构建，模型更领先、回答更聪明"],
+      "application": "功能描述时，先说明特点（技术优势、能力等），再说明带来的价值（用户体验、效果等）"
     }
   ],
   "edges": [
@@ -348,6 +368,18 @@
       "to": "grid-system",
       "relationship": "requires",
       "weight": 1.0
+    },
+    {
+      "from": "feature-modular-display",
+      "to": "card-layout",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "feature-modular-display",
+      "to": "consistent-spacing",
+      "relationship": "requires",
+      "weight": 0.8
     }
   ]
 }

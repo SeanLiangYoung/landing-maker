@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "前端专家知识库 DAG",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "前端专家 Agent 的 DAG 知识库，用于结构化存储和检索前端实现专业知识",
     "created_at": "2026-02-09",
     "updated_at": "2026-02-09"
@@ -246,6 +246,16 @@
       "dependencies": ["smooth-transition"],
       "examples": ["Intersection Observer", "淡入效果", "视差效果"],
       "application": "增强页面交互体验"
+    },
+    {
+      "id": "modular-display",
+      "name": "模块化展示",
+      "category": "implementation-patterns.page-paradigms",
+      "description": "多个功能以独立模块形式展示的实现模式",
+      "tags": ["modular", "display", "features", "layout"],
+      "dependencies": ["card-component", "responsive-layout"],
+      "examples": ["功能模块化展示", "产品模块展示"],
+      "application": "适合展示多个相关功能或产品，每个功能独立成模块"
     }
   ],
   "edges": [
@@ -348,6 +358,18 @@
     {
       "from": "scroll-animation",
       "to": "smooth-transition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "modular-display",
+      "to": "card-component",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "modular-display",
+      "to": "responsive-layout",
       "relationship": "requires",
       "weight": 1.0
     }

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "name": "产品专家知识库 DAG",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "产品专家 Agent 的 DAG 知识库，用于结构化存储和检索产品专业知识",
     "created_at": "2026-02-09",
     "updated_at": "2026-02-09"
@@ -226,6 +226,46 @@
       "dependencies": ["e-commerce-solution"],
       "examples": ["商品类型", "目标客户", "支付方式", "物流需求"],
       "application": "电商产品的需求挖掘"
+    },
+    {
+      "id": "ai-tools-solution",
+      "name": "AI 工具类产品解决方案",
+      "category": "industry-solutions.ai-tools",
+      "description": "AI 工具类产品的 Landing 页面解决方案",
+      "tags": ["ai", "tools", "b2c", "productivity"],
+      "dependencies": ["b2c-positioning", "feature-modular-display", "value-proposition"],
+      "examples": ["夸克AI简历", "AI写作工具", "AI设计工具"],
+      "application": "适用于AI工具类产品、生产力工具、个人助手"
+    },
+    {
+      "id": "feature-modular-display",
+      "name": "功能模块化展示",
+      "category": "standard-content.feature-descriptions",
+      "description": "多个功能以独立模块形式展示，每个模块包含功能名称、特点描述和价值说明",
+      "tags": ["modular", "features", "display"],
+      "dependencies": ["feature-benefit-combination"],
+      "examples": ["夸克AI简历页面", "多产品功能展示"],
+      "application": "适合展示多个相关功能或产品"
+    },
+    {
+      "id": "feature-benefit-combination",
+      "name": "特点+价值组合",
+      "category": "standard-content.feature-descriptions",
+      "description": "功能描述采用特点+价值组合模式，先说明特点，再说明带来的价值",
+      "tags": ["feature", "benefit", "description"],
+      "dependencies": [],
+      "examples": ["模型先进：基于阿里最强Qwen大模型构建，模型更领先、回答更聪明"],
+      "application": "功能描述时，先说明特点，再说明带来的价值"
+    },
+    {
+      "id": "problem-solution-pattern",
+      "name": "问题-解决方案模式",
+      "category": "standard-content.feature-descriptions",
+      "description": "功能描述采用问题-解决方案模式，先说明问题，再说明解决方案",
+      "tags": ["problem", "solution", "feature", "description"],
+      "dependencies": ["value-proposition"],
+      "examples": ["告别标签焦虑：智能标签管理，分类井井有条"],
+      "application": "痛点解决、用户体验提升"
     }
   ],
   "edges": [
@@ -420,6 +460,36 @@
       "to": "e-commerce-solution",
       "relationship": "uses",
       "weight": 1.0
+    },
+    {
+      "from": "ai-tools-solution",
+      "to": "b2c-positioning",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "ai-tools-solution",
+      "to": "feature-modular-display",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "ai-tools-solution",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "feature-modular-display",
+      "to": "feature-benefit-combination",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "problem-solution-pattern",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 0.8
     }
   ]
 }

@@ -22,6 +22,7 @@
 ```
 product-expert/
 ├── README.md                    # 知识库说明文档
+├── CHANGELOG.md                 # 知识库变更日志
 ├── knowledge-dag.json          # DAG 结构定义（节点和边）
 ├── industry-solutions/         # 行业解决方案知识
 │   ├── saas/                  # SaaS 行业解决方案
@@ -54,5 +55,7 @@ product-expert/
 
 ## 知识库维护
 
+- **数据收集专家 Agent**：负责采集和精炼产品知识，持续丰富知识库
 - **项目复盘**：根据实际项目经验，持续优化知识库内容
 - **最佳实践积累**：将优秀的行业解决方案和标准内容纳入知识库
+- **变更日志**：所有知识库更新都会记录在 `CHANGELOG.md` 中，包括新增、更新、删除的知识点和 DAG 变更
