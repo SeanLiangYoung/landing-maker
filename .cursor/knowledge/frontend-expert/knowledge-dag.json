@@ -1,0 +1,355 @@
+{
+  "metadata": {
+    "name": "前端专家知识库 DAG",
+    "version": "1.0.0",
+    "description": "前端专家 Agent 的 DAG 知识库，用于结构化存储和检索前端实现专业知识",
+    "created_at": "2026-02-09",
+    "updated_at": "2026-02-09"
+  },
+  "nodes": [
+    {
+      "id": "responsive-layout",
+      "name": "响应式布局",
+      "category": "layout-solutions.responsive-layout",
+      "description": "适配不同屏幕尺寸的响应式布局方案",
+      "tags": ["responsive", "layout", "mobile-first"],
+      "dependencies": ["css-grid", "flexbox", "media-queries"],
+      "examples": ["移动端优先", "桌面端优先", "断点适配"],
+      "application": "所有 Landing 页面必须支持响应式布局"
+    },
+    {
+      "id": "css-grid",
+      "name": "CSS Grid",
+      "category": "layout-solutions.grid-systems",
+      "description": "使用 CSS Grid 实现复杂布局",
+      "tags": ["grid", "layout", "css"],
+      "dependencies": [],
+      "examples": ["grid-template-columns", "grid-template-rows", "grid-gap"],
+      "application": "适合复杂网格布局，如功能展示、卡片网格"
+    },
+    {
+      "id": "flexbox",
+      "name": "Flexbox",
+      "category": "layout-solutions.flexbox-grid",
+      "description": "使用 Flexbox 实现一维布局",
+      "tags": ["flexbox", "layout", "css"],
+      "dependencies": [],
+      "examples": ["display: flex", "justify-content", "align-items"],
+      "application": "适合一维布局，如导航栏、按钮组"
+    },
+    {
+      "id": "media-queries",
+      "name": "媒体查询",
+      "category": "layout-solutions.responsive-layout",
+      "description": "使用媒体查询实现响应式设计",
+      "tags": ["media-query", "responsive", "breakpoint"],
+      "dependencies": [],
+      "examples": ["@media (max-width: 768px)", "移动端断点", "桌面端断点"],
+      "application": "定义响应式断点，适配不同设备"
+    },
+    {
+      "id": "hero-section",
+      "name": "Hero 区块",
+      "category": "implementation-patterns.page-paradigms",
+      "description": "Landing 页面的 Hero 区块实现模式",
+      "tags": ["hero", "section", "landing"],
+      "dependencies": ["responsive-layout", "typography-system"],
+      "examples": ["居中 Hero", "分屏 Hero", "全屏 Hero"],
+      "application": "Landing 页面的首屏展示区块"
+    },
+    {
+      "id": "typography-system",
+      "name": "字体系统",
+      "category": "implementation-patterns.code-patterns",
+      "description": "统一的字体系统实现",
+      "tags": ["typography", "font", "system"],
+      "dependencies": [],
+      "examples": ["Google Fonts", "系统字体栈", "字体缩放"],
+      "application": "定义标题、正文、副标题的字体大小和行高"
+    },
+    {
+      "id": "feature-grid",
+      "name": "功能网格",
+      "category": "component-library.common-components",
+      "description": "使用网格展示功能特性",
+      "tags": ["grid", "features", "component"],
+      "dependencies": ["css-grid", "card-component"],
+      "examples": ["2×2 网格", "3 列网格", "4 列网格"],
+      "application": "展示核心功能特性"
+    },
+    {
+      "id": "card-component",
+      "name": "卡片组件",
+      "category": "component-library.ui-components",
+      "description": "通用的卡片组件实现",
+      "tags": ["card", "component", "ui"],
+      "dependencies": ["box-shadow", "border-radius"],
+      "examples": ["功能卡片", "定价卡片", "案例卡片"],
+      "application": "用于组织内容，提供视觉层次"
+    },
+    {
+      "id": "box-shadow",
+      "name": "阴影效果",
+      "category": "implementation-patterns.code-patterns",
+      "description": "使用 box-shadow 创建阴影效果",
+      "tags": ["shadow", "css", "visual"],
+      "dependencies": [],
+      "examples": ["0 2px 4px rgba(0,0,0,0.05)", "0 4px 12px rgba(0,0,0,0.1)"],
+      "application": "卡片、按钮的阴影效果"
+    },
+    {
+      "id": "border-radius",
+      "name": "圆角效果",
+      "category": "implementation-patterns.code-patterns",
+      "description": "使用 border-radius 创建圆角",
+      "tags": ["border-radius", "css", "visual"],
+      "dependencies": [],
+      "examples": ["8px", "12px", "16px"],
+      "application": "按钮、卡片、输入框的圆角"
+    },
+    {
+      "id": "cta-button",
+      "name": "CTA 按钮",
+      "category": "component-library.interactive-components",
+      "description": "行动号召按钮组件",
+      "tags": ["button", "cta", "interactive"],
+      "dependencies": ["hover-effect", "gradient-background"],
+      "examples": ["主要按钮", "次要按钮", "渐变按钮"],
+      "application": "引导用户行动的主要按钮"
+    },
+    {
+      "id": "hover-effect",
+      "name": "悬停效果",
+      "category": "animation-effects.interactions",
+      "description": "鼠标悬停时的交互效果",
+      "tags": ["hover", "interaction", "css"],
+      "dependencies": ["smooth-transition"],
+      "examples": ["颜色变化", "阴影增强", "缩放效果"],
+      "application": "提升交互体验的悬停效果"
+    },
+    {
+      "id": "smooth-transition",
+      "name": "平滑过渡",
+      "category": "animation-effects.transitions",
+      "description": "使用 transition 实现平滑过渡",
+      "tags": ["transition", "animation", "css"],
+      "dependencies": [],
+      "examples": ["transition: all 0.3s ease", "150-300ms 过渡"],
+      "application": "所有交互元素的过渡动画"
+    },
+    {
+      "id": "gradient-background",
+      "name": "渐变背景",
+      "category": "implementation-patterns.code-patterns",
+      "description": "使用 CSS 渐变创建背景",
+      "tags": ["gradient", "background", "css"],
+      "dependencies": [],
+      "examples": ["linear-gradient", "radial-gradient"],
+      "application": "Hero 区块、按钮的背景渐变"
+    },
+    {
+      "id": "svg-icons",
+      "name": "SVG 图标",
+      "category": "component-library.ui-components",
+      "description": "使用 SVG 图标替代 emoji",
+      "tags": ["svg", "icon", "ui"],
+      "dependencies": [],
+      "examples": ["Heroicons", "Lucide", "内联 SVG"],
+      "application": "所有图标使用 SVG，禁止使用 emoji"
+    },
+    {
+      "id": "seo-meta-tags",
+      "name": "SEO Meta 标签",
+      "category": "implementation-patterns.code-patterns",
+      "description": "实现 SEO 优化的 meta 标签",
+      "tags": ["seo", "meta", "html"],
+      "dependencies": [],
+      "examples": ["title", "description", "og:title", "og:description"],
+      "application": "必须完整应用 seo-suggestions.md 中的 meta 标签建议"
+    },
+    {
+      "id": "structured-data",
+      "name": "结构化数据",
+      "category": "implementation-patterns.code-patterns",
+      "description": "使用 JSON-LD 实现结构化数据",
+      "tags": ["seo", "json-ld", "schema"],
+      "dependencies": [],
+      "examples": ["Organization", "Product", "FAQPage"],
+      "application": "必须生成 seo-suggestions.md 中要求的结构化数据"
+    },
+    {
+      "id": "semantic-html",
+      "name": "语义化 HTML",
+      "category": "implementation-patterns.code-patterns",
+      "description": "使用语义化 HTML 标签",
+      "tags": ["html", "semantic", "accessibility"],
+      "dependencies": [],
+      "examples": ["header", "nav", "main", "section", "article", "footer"],
+      "application": "提升可访问性和 SEO"
+    },
+    {
+      "id": "accessibility",
+      "name": "可访问性",
+      "category": "compatibility-solutions.browser-compatibility",
+      "description": "实现可访问性要求",
+      "tags": ["accessibility", "a11y", "wcag"],
+      "dependencies": ["semantic-html", "color-contrast"],
+      "examples": ["alt 属性", "aria-label", "键盘导航"],
+      "application": "满足 WCAG 标准，提升可访问性"
+    },
+    {
+      "id": "color-contrast",
+      "name": "色彩对比度",
+      "category": "compatibility-solutions.browser-compatibility",
+      "description": "确保足够的色彩对比度",
+      "tags": ["color", "contrast", "accessibility"],
+      "dependencies": [],
+      "examples": ["4.5:1 文本对比度", "3:1 大文本对比度"],
+      "application": "满足 WCAG AA 标准"
+    },
+    {
+      "id": "mobile-first",
+      "name": "移动端优先",
+      "category": "layout-solutions.responsive-layout",
+      "description": "移动端优先的响应式设计策略",
+      "tags": ["mobile-first", "responsive", "strategy"],
+      "dependencies": ["media-queries"],
+      "examples": ["先设计移动端", "逐步增强到桌面端"],
+      "application": "推荐使用移动端优先策略"
+    },
+    {
+      "id": "container-max-width",
+      "name": "容器最大宽度",
+      "category": "layout-solutions.responsive-layout",
+      "description": "设置容器的最大宽度",
+      "tags": ["container", "max-width", "layout"],
+      "dependencies": [],
+      "examples": ["1200px", "1140px", "1280px"],
+      "application": "桌面端容器最大宽度，通常 1200px"
+    },
+    {
+      "id": "loading-animation",
+      "name": "加载动画",
+      "category": "animation-effects.loading-animations",
+      "description": "页面加载时的动画效果",
+      "tags": ["loading", "animation", "css"],
+      "dependencies": ["smooth-transition"],
+      "examples": ["淡入效果", "滑入效果", "骨架屏"],
+      "application": "提升页面加载体验"
+    },
+    {
+      "id": "scroll-animation",
+      "name": "滚动动画",
+      "category": "animation-effects.interactions",
+      "description": "滚动时的动画效果",
+      "tags": ["scroll", "animation", "javascript"],
+      "dependencies": ["smooth-transition"],
+      "examples": ["Intersection Observer", "淡入效果", "视差效果"],
+      "application": "增强页面交互体验"
+    }
+  ],
+  "edges": [
+    {
+      "from": "responsive-layout",
+      "to": "css-grid",
+      "relationship": "requires",
+      "weight": 0.8
+    },
+    {
+      "from": "responsive-layout",
+      "to": "flexbox",
+      "relationship": "requires",
+      "weight": 0.8
+    },
+    {
+      "from": "responsive-layout",
+      "to": "media-queries",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "hero-section",
+      "to": "responsive-layout",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "hero-section",
+      "to": "typography-system",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "feature-grid",
+      "to": "css-grid",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "feature-grid",
+      "to": "card-component",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "card-component",
+      "to": "box-shadow",
+      "relationship": "requires",
+      "weight": 0.8
+    },
+    {
+      "from": "card-component",
+      "to": "border-radius",
+      "relationship": "requires",
+      "weight": 0.7
+    },
+    {
+      "from": "cta-button",
+      "to": "hover-effect",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "cta-button",
+      "to": "gradient-background",
+      "relationship": "requires",
+      "weight": 0.7
+    },
+    {
+      "from": "hover-effect",
+      "to": "smooth-transition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "mobile-first",
+      "to": "media-queries",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "accessibility",
+      "to": "semantic-html",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "accessibility",
+      "to": "color-contrast",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "loading-animation",
+      "to": "smooth-transition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "scroll-animation",
+      "to": "smooth-transition",
+      "relationship": "requires",
+      "weight": 1.0
+    }
+  ]
+}

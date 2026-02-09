@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "name": "产品专家知识库 DAG",
+    "version": "1.0.0",
+    "description": "产品专家 Agent 的 DAG 知识库，用于结构化存储和检索产品专业知识",
+    "created_at": "2026-02-09",
+    "updated_at": "2026-02-09"
+  },
+  "nodes": [
+    {
+      "id": "saas-solution",
+      "name": "SaaS 产品解决方案",
+      "category": "industry-solutions.saas",
+      "description": "SaaS 产品的 Landing 页面解决方案，包括内容结构、价值主张、功能展示等",
+      "tags": ["saas", "b2b", "software", "subscription"],
+      "dependencies": ["b2b-positioning", "feature-showcase", "pricing-tiers"],
+      "examples": ["Stripe", "Linear", "Notion"],
+      "application": "适用于 SaaS 产品、软件服务、订阅制产品"
+    },
+    {
+      "id": "b2b-positioning",
+      "name": "B2B 定位模式",
+      "category": "positioning-patterns.b2b",
+      "description": "面向企业客户的产品定位和表达方式",
+      "tags": ["b2b", "enterprise", "business"],
+      "dependencies": ["professional-tone", "value-proposition"],
+      "examples": ["专业可信", "效率提升", "成本节约"],
+      "application": "强调专业性、可信度、ROI、效率提升"
+    },
+    {
+      "id": "feature-showcase",
+      "name": "功能展示模式",
+      "category": "standard-content.feature-descriptions",
+      "description": "展示产品核心功能的标准化方式",
+      "tags": ["features", "showcase", "content"],
+      "dependencies": ["value-proposition"],
+      "examples": ["功能网格", "对比表格", "使用场景"],
+      "application": "清晰展示核心功能，突出产品价值"
+    },
+    {
+      "id": "pricing-tiers",
+      "name": "定价层级模式",
+      "category": "standard-content.pricing-copy",
+      "description": "多层级定价方案的展示方式",
+      "tags": ["pricing", "tiers", "subscription"],
+      "dependencies": ["value-proposition"],
+      "examples": ["免费版", "专业版", "企业版"],
+      "application": "SaaS 产品常见的多层级定价"
+    },
+    {
+      "id": "professional-tone",
+      "name": "专业语调",
+      "category": "standard-content.tone",
+      "description": "专业、可信、权威的表达语调",
+      "tags": ["tone", "professional", "trustworthy"],
+      "dependencies": [],
+      "examples": ["使用专业术语", "数据支撑", "案例证明"],
+      "application": "B2B 产品、企业服务"
+    },
+    {
+      "id": "value-proposition",
+      "name": "价值主张",
+      "category": "standard-content.value-propositions",
+      "description": "清晰表达产品核心价值的模板",
+      "tags": ["value", "proposition", "benefit"],
+      "dependencies": [],
+      "examples": ["解决什么问题", "带来什么价值", "为什么选择我们"],
+      "application": "所有产品都需要清晰的价值主张"
+    },
+    {
+      "id": "e-commerce-solution",
+      "name": "电商产品解决方案",
+      "category": "industry-solutions.e-commerce",
+      "description": "电商产品的 Landing 页面解决方案",
+      "tags": ["e-commerce", "b2c", "retail"],
+      "dependencies": ["b2c-positioning", "product-showcase", "social-proof"],
+      "examples": ["Shopify", "Amazon", "淘宝"],
+      "application": "适用于电商平台、在线零售、购物网站"
+    },
+    {
+      "id": "b2c-positioning",
+      "name": "B2C 定位模式",
+      "category": "positioning-patterns.b2c",
+      "description": "面向消费者的产品定位和表达方式",
+      "tags": ["b2c", "consumer", "retail"],
+      "dependencies": ["friendly-tone", "value-proposition"],
+      "examples": ["温暖友好", "便捷高效", "性价比高"],
+      "application": "强调亲和力、便捷性、性价比、用户体验"
+    },
+    {
+      "id": "product-showcase",
+      "name": "产品展示模式",
+      "category": "standard-content.feature-descriptions",
+      "description": "展示产品/商品的标准化方式",
+      "tags": ["product", "showcase", "display"],
+      "dependencies": ["value-proposition"],
+      "examples": ["产品图片", "产品详情", "规格参数"],
+      "application": "电商产品、实物商品展示"
+    },
+    {
+      "id": "social-proof",
+      "name": "社会证明",
+      "category": "standard-content.social-proof",
+      "description": "使用用户评价、案例、数据等建立信任",
+      "tags": ["testimonials", "reviews", "trust"],
+      "dependencies": [],
+      "examples": ["用户评价", "成功案例", "统计数据"],
+      "application": "所有产品都需要社会证明建立信任"
+    },
+    {
+      "id": "friendly-tone",
+      "name": "友好语调",
+      "category": "standard-content.tone",
+      "description": "温暖、友好、亲和的表达语调",
+      "tags": ["tone", "friendly", "warm"],
+      "dependencies": [],
+      "examples": ["使用日常语言", "情感共鸣", "用户视角"],
+      "application": "B2C 产品、面向消费者的服务"
+    },
+    {
+      "id": "education-solution",
+      "name": "教育产品解决方案",
+      "category": "industry-solutions.education",
+      "description": "教育产品的 Landing 页面解决方案",
+      "tags": ["education", "learning", "course"],
+      "dependencies": ["b2c-positioning", "outcome-showcase", "social-proof"],
+      "examples": ["Coursera", "Udemy", "得到"],
+      "application": "适用于在线教育、课程平台、学习工具"
+    },
+    {
+      "id": "outcome-showcase",
+      "name": "成果展示模式",
+      "category": "standard-content.feature-descriptions",
+      "description": "展示学习成果、效果的标准化方式",
+      "tags": ["outcome", "result", "achievement"],
+      "dependencies": ["value-proposition"],
+      "examples": ["学员成果", "就业数据", "技能提升"],
+      "application": "教育产品、培训服务"
+    },
+    {
+      "id": "healthcare-solution",
+      "name": "医疗产品解决方案",
+      "category": "industry-solutions.healthcare",
+      "description": "医疗健康产品的 Landing 页面解决方案",
+      "tags": ["healthcare", "medical", "health"],
+      "dependencies": ["trust-positioning", "safety-showcase", "professional-tone"],
+      "examples": ["丁香园", "好大夫", "春雨医生"],
+      "application": "适用于医疗平台、健康服务、医疗工具"
+    },
+    {
+      "id": "trust-positioning",
+      "name": "信任定位模式",
+      "category": "positioning-patterns.trust",
+      "description": "强调信任、安全、专业的定位方式",
+      "tags": ["trust", "safety", "security"],
+      "dependencies": ["professional-tone", "social-proof"],
+      "examples": ["专业认证", "安全保障", "隐私保护"],
+      "application": "医疗、金融、数据安全相关产品"
+    },
+    {
+      "id": "safety-showcase",
+      "name": "安全保障展示",
+      "category": "standard-content.feature-descriptions",
+      "description": "展示安全保障、隐私保护等关键信息",
+      "tags": ["safety", "security", "privacy"],
+      "dependencies": ["value-proposition"],
+      "examples": ["数据加密", "隐私保护", "合规认证"],
+      "application": "医疗、金融、数据相关产品"
+    },
+    {
+      "id": "fintech-solution",
+      "name": "金融科技解决方案",
+      "category": "industry-solutions.fintech",
+      "description": "金融科技产品的 Landing 页面解决方案",
+      "tags": ["fintech", "finance", "payment"],
+      "dependencies": ["trust-positioning", "security-showcase", "professional-tone"],
+      "examples": ["Stripe", "Square", "支付宝"],
+      "application": "适用于支付工具、金融平台、理财服务"
+    },
+    {
+      "id": "security-showcase",
+      "name": "安全展示模式",
+      "category": "standard-content.feature-descriptions",
+      "description": "展示安全措施、风控能力的标准化方式",
+      "tags": ["security", "risk-control", "compliance"],
+      "dependencies": ["value-proposition"],
+      "examples": ["风控系统", "安全认证", "合规资质"],
+      "application": "金融科技、支付相关产品"
+    },
+    {
+      "id": "cta-copy",
+      "name": "CTA 文案模板",
+      "category": "standard-content.cta-copy",
+      "description": "行动号召按钮的文案模板",
+      "tags": ["cta", "button", "copy"],
+      "dependencies": ["value-proposition"],
+      "examples": ["立即开始", "免费试用", "了解更多"],
+      "application": "所有 Landing 页面的 CTA 按钮"
+    },
+    {
+      "id": "hero-content",
+      "name": "Hero 区块内容",
+      "category": "standard-content.hero-content",
+      "description": "Hero 区块的标准内容结构",
+      "tags": ["hero", "headline", "subheadline"],
+      "dependencies": ["value-proposition", "cta-copy"],
+      "examples": ["主标题+副标题+CTA", "价值主张+功能亮点+CTA"],
+      "application": "所有 Landing 页面的首屏内容"
+    },
+    {
+      "id": "requirement-template-saas",
+      "name": "SaaS 需求模板",
+      "category": "requirement-templates.saas",
+      "description": "SaaS 产品的需求挖掘模板和问题清单",
+      "tags": ["template", "saas", "requirements"],
+      "dependencies": ["saas-solution"],
+      "examples": ["目标用户", "核心功能", "定价模式", "集成需求"],
+      "application": "SaaS 产品的需求挖掘"
+    },
+    {
+      "id": "requirement-template-ecommerce",
+      "name": "电商需求模板",
+      "category": "requirement-templates.e-commerce",
+      "description": "电商产品的需求挖掘模板和问题清单",
+      "tags": ["template", "e-commerce", "requirements"],
+      "dependencies": ["e-commerce-solution"],
+      "examples": ["商品类型", "目标客户", "支付方式", "物流需求"],
+      "application": "电商产品的需求挖掘"
+    }
+  ],
+  "edges": [
+    {
+      "from": "saas-solution",
+      "to": "b2b-positioning",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "saas-solution",
+      "to": "feature-showcase",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "saas-solution",
+      "to": "pricing-tiers",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "b2b-positioning",
+      "to": "professional-tone",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "b2b-positioning",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "feature-showcase",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "pricing-tiers",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 0.8
+    },
+    {
+      "from": "e-commerce-solution",
+      "to": "b2c-positioning",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "e-commerce-solution",
+      "to": "product-showcase",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "e-commerce-solution",
+      "to": "social-proof",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "b2c-positioning",
+      "to": "friendly-tone",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "b2c-positioning",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "product-showcase",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "education-solution",
+      "to": "b2c-positioning",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "education-solution",
+      "to": "outcome-showcase",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "education-solution",
+      "to": "social-proof",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "outcome-showcase",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "healthcare-solution",
+      "to": "trust-positioning",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "healthcare-solution",
+      "to": "safety-showcase",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "healthcare-solution",
+      "to": "professional-tone",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "trust-positioning",
+      "to": "professional-tone",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "trust-positioning",
+      "to": "social-proof",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "safety-showcase",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "fintech-solution",
+      "to": "trust-positioning",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "fintech-solution",
+      "to": "security-showcase",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "fintech-solution",
+      "to": "professional-tone",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "security-showcase",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "hero-content",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 1.0
+    },
+    {
+      "from": "hero-content",
+      "to": "cta-copy",
+      "relationship": "requires",
+      "weight": 0.9
+    },
+    {
+      "from": "cta-copy",
+      "to": "value-proposition",
+      "relationship": "requires",
+      "weight": 0.8
+    },
+    {
+      "from": "requirement-template-saas",
+      "to": "saas-solution",
+      "relationship": "uses",
+      "weight": 1.0
+    },
+    {
+      "from": "requirement-template-ecommerce",
+      "to": "e-commerce-solution",
+      "relationship": "uses",
+      "weight": 1.0
+    }
+  ]
+}
