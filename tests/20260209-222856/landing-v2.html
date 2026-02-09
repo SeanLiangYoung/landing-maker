@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 简历优化工具 - 免费试用，智能 JD 匹配，ATS 优化 | 简历优化</title>
+    <meta name="description" content="AI 简历优化工具，免费试用满意再付费。智能 JD 匹配，ATS 优化，多轮对话优化简历内容。下载后自动删除，保护隐私安全。立即免费试用！">
+    
+    <!-- Open Graph 标签 -->
+    <meta property="og:title" content="AI 简历优化工具 - 免费试用，智能 JD 匹配，ATS 优化">
+    <meta property="og:description" content="AI 简历优化工具，免费试用满意再付费。智能 JD 匹配，ATS 优化，多轮对话优化简历内容。下载后自动删除，保护隐私安全。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/og-image.jpg">
+    
+    <!-- 结构化数据 JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "AI 简历优化工具",
+          "description": "专业的 AI 简历优化工具，提供智能 JD 匹配、ATS 优化、免费生成调整等服务",
+          "url": "https://example.com",
+          "logo": "https://example.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@example.com"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "AI 简历优化工具",
+          "description": "AI 简历优化工具，提供智能 JD 匹配、ATS 优化、免费生成调整等服务。免费试用，满意再付费。",
+          "image": "https://example.com/product-image.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "AI 简历优化工具"
+          },
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "单篇下载",
+              "price": "9.9",
+              "priceCurrency": "CNY",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "包月套餐",
+              "price": "29.9",
+              "priceCurrency": "CNY",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "高级包月套餐",
+              "price": "199",
+              "priceCurrency": "CNY",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "name": "AI 简历优化工具",
+          "url": "https://example.com"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "AI 简历优化工具如何使用？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "用户上传基本的简历和 JD，AI 分析后输出改进建议，通过多轮对话，最终生成简历的最终版本。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "简历优化后如何保证隐私安全？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "简历内容在用户下载完成后自动删除，不保留云端备份，确保用户隐私不被泄露。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "AI 简历优化工具是免费的吗？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "用户可以免费生成和调整简历，仅最终下载时付费。单篇下载 9.9 元，包月套餐 29.9 元（10 份简历），高级包月套餐 199 元（无限制下载）。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "ATS 优化是什么意思？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ATS（申请人跟踪系统）是企业用于筛选简历的系统。我们的 AI 简历优化工具会优化简历格式和内容，提高通过 ATS 筛选的概率。"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "智能 JD 匹配是如何工作的？",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "用户上传简历和招聘岗位的 JD，AI 会分析 JD 中的关键词和要求，然后优化简历内容，使其更匹配岗位需求，提高简历通过率。"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #cbbfac;
+            --primary-dark: #a89d8a;
+            --primary-light: #e8e3d9;
+            --text-primary: #2d2d2d;
+            --text-secondary: #666666;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --border-color: #e5e5e5;
+            --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero 区块 */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, rgba(203, 191, 172, 0.3) 50%, var(--bg-white) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(203, 191, 172, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.35rem;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--text-primary);
+            padding: 18px 48px;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 15px rgba(203, 191, 172, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .cta-button:focus {
+            outline: 3px solid var(--primary-dark);
+            outline-offset: 2px;
+        }
+        
+        /* 核心功能区块 */
+        .features {
+            padding: 80px 20px;
+            background-color: var(--bg-white);
+        }
+        
+        .features h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, var(--bg-white) 0%, var(--primary-light) 100%);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid transparent;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(203, 191, 172, 0.3);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-card:hover::before {
+            opacity: 0.05;
+        }
+        
+        .feature-card > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 12px rgba(203, 191, 172, 0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: rotate(5deg) scale(1.1);
+            box-shadow: 0 6px 20px rgba(203, 191, 172, 0.4);
+        }
+        
+        .feature-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--bg-white);
+            fill: none;
+            stroke-width: 2.5;
+        }
+        
+        /* 成功案例区块 */
+        .testimonials {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+        
+        .testimonials h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .testimonials .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 2px solid var(--border-color);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 4rem;
+            color: var(--primary-light);
+            font-weight: 700;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(203, 191, 172, 0.2);
+            border-color: var(--primary-color);
+        }
+        
+        .testimonial-content {
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .testimonial-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-white);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+        
+        .testimonial-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .testimonial-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+        
+        /* 使用流程区块 */
+        .process {
+            padding: 100px 20px;
+            background-color: var(--bg-white);
+        }
+        
+        .process h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .process .subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+        
+        .process-step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-color);
+            color: var(--text-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* 定价方案区块 */
+        .pricing {
+            padding: 80px 20px;
+            background-color: var(--bg-white);
+        }
+        
+        .pricing h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background-color: var(--bg-white);
+            padding: 40px 32px;
+            border-radius: var(--radius-md);
+            border: 2px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-lg);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-4px);
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .pricing-period {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-button {
+            width: 100%;
+            padding: 14px 24px;
+            background-color: var(--primary-color);
+            color: var(--text-primary);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .pricing-button:focus {
+            outline: 3px solid var(--primary-dark);
+            outline-offset: 2px;
+        }
+        
+        /* 隐私保护区块 */
+        .privacy {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+        }
+        
+        .privacy h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 32px;
+            color: var(--text-primary);
+        }
+        
+        .privacy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .privacy-content p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .privacy-badge {
+            display: inline-block;
+            background-color: var(--primary-light);
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-top: 24px;
+        }
+        
+        /* 联系我们区块 */
+        .contact {
+            padding: 80px 20px;
+            background-color: var(--bg-white);
+        }
+        
+        .contact h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            padding: 14px 24px;
+            background-color: var(--primary-color);
+            color: var(--text-primary);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .submit-button:focus {
+            outline: 3px solid var(--primary-dark);
+            outline-offset: 2px;
+        }
+        
+        /* FAQ 区块 */
+        .faq {
+            padding: 80px 20px;
+            background-color: var(--bg-light);
+        }
+        
+        .faq h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--text-primary);
+        }
+        
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: var(--bg-white);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-item h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        
+        .faq-item p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--text-primary);
+            color: var(--bg-white);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .footer p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-4px);
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .cta-button {
+                padding: 14px 32px;
+                font-size: 1rem;
+            }
+        }
+        
+        /* 可访问性 */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* 确保所有可点击元素有 cursor-pointer */
+        button,
+        .cta-button,
+        .pricing-button,
+        .submit-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero 区块 -->
+    <section class="hero">
+        <div class="container">
+            <h1>AI 简历优化工具 - 免费试用，满意再付费</h1>
+            <p class="subtitle">智能 JD 匹配，ATS 优化，多轮对话优化简历内容。提高简历通过率，节省时间，获得专业建议。</p>
+            <a href="#contact" class="cta-button">立即免费试用</a>
+        </div>
+    </section>
+    
+    <!-- 核心功能区块 -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>核心功能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3>智能 JD 匹配</h3>
+                    <p>根据招聘岗位的 JD，定向优化简历内容，提高匹配度，让您的简历更符合岗位需求。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>ATS 优化</h3>
+                    <p>优化简历格式和内容，提高通过 ATS（申请人跟踪系统）筛选的概率，增加面试机会。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>免费生成和调整</h3>
+                    <p>用户可以免费生成和调整简历，仅最终下载时付费。免费试用，满意再付费，降低使用门槛。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                    </div>
+                    <h3>隐私保护</h3>
+                    <p>简历内容在用户下载完成后自动删除，不保留云端备份，确保用户隐私不被泄露。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 成功案例区块 -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>成功案例</h2>
+            <p class="subtitle">真实用户，真实成果</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-content">作为一名应届毕业生，我投递了50多份简历都没有回音。使用 AI 简历优化工具后，我的简历通过率从 5% 提升到了 35%，最终成功拿到了心仪的 offer。智能 JD 匹配功能真的太强大了！</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">张</div>
+                        <div class="testimonial-info">
+                            <h4>张同学</h4>
+                            <p>应届毕业生 | 软件工程师</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-content">工作5年后想转行，但简历总是被 ATS 系统筛掉。通过 AI 简历优化工具的 ATS 优化功能，我的简历格式和关键词都得到了优化，面试邀请增加了 3 倍，最终成功转行到心仪的行业。</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">李</div>
+                        <div class="testimonial-info">
+                            <h4>李先生</h4>
+                            <p>转行专业人士 | 产品经理</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-content">跳槽时使用 AI 简历优化工具，根据目标岗位的 JD 精准优化简历内容。多轮对话功能让我能够不断调整，最终生成的简历完美匹配岗位需求，HR 直接打电话邀请面试，效率提升 10 倍！</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">王</div>
+                        <div class="testimonial-info">
+                            <h4>王女士</h4>
+                            <p>跳槽专业人士 | 市场总监</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10,000+</span>
+                    <span class="stat-label">成功优化简历</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">简历通过率提升</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4.9/5</span>
+                    <span class="stat-label">用户满意度</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 使用流程区块 -->
+    <section class="process" id="process">
+        <div class="container">
+            <h2>使用流程</h2>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>上传简历和 JD</h3>
+                    <p>上传您的基本简历和招聘岗位的 JD（职位描述），系统将自动分析匹配度。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>AI 分析</h3>
+                    <p>AI 智能分析 JD 中的关键词和要求，识别简历中需要优化的部分。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>输出改进建议</h3>
+                    <p>系统输出详细的改进建议，包括内容优化、格式调整、关键词匹配等。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3>多轮对话优化</h3>
+                    <p>通过多轮对话，您可以与 AI 交流，进一步优化简历内容，直到满意为止。</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">5</div>
+                    <h3>生成最终版本</h3>
+                    <p>生成优化后的简历最终版本，下载即可使用。简历内容会自动突出您使用 AI 的能力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 定价方案区块 -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>定价方案</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>单篇下载</h3>
+                    <div class="pricing-price">¥9.9</div>
+                    <div class="pricing-period">每篇</div>
+                    <ul class="pricing-features">
+                        <li>单次下载优化后的简历</li>
+                        <li>免费生成和调整</li>
+                        <li>智能 JD 匹配</li>
+                        <li>ATS 优化</li>
+                    </ul>
+                    <button class="pricing-button">立即购买</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>包月套餐</h3>
+                    <div class="pricing-price">¥29.9</div>
+                    <div class="pricing-period">每月</div>
+                    <ul class="pricing-features">
+                        <li>有效期内可下载 10 份简历</li>
+                        <li>免费生成和调整</li>
+                        <li>智能 JD 匹配</li>
+                        <li>ATS 优化</li>
+                        <li>优先客服支持</li>
+                    </ul>
+                    <button class="pricing-button">立即购买</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>高级包月套餐</h3>
+                    <div class="pricing-price">¥199</div>
+                    <div class="pricing-period">每月</div>
+                    <ul class="pricing-features">
+                        <li>有效期内无限制下载简历</li>
+                        <li>免费生成和调整</li>
+                        <li>智能 JD 匹配</li>
+                        <li>ATS 优化</li>
+                        <li>专属客服支持</li>
+                        <li>高级优化建议</li>
+                    </ul>
+                    <button class="pricing-button">立即购买</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 隐私保护区块 -->
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <h2>隐私保护</h2>
+            <div class="privacy-content">
+                <p>我们深知简历信息的敏感性，因此采用严格的隐私保护措施：</p>
+                <p><strong>下载后自动删除</strong>：简历内容在用户下载完成后立即自动删除，不保留任何云端备份。</p>
+                <p><strong>数据安全</strong>：所有数据传输均采用加密技术，确保您的个人信息安全。</p>
+                <p><strong>隐私承诺</strong>：我们承诺不会将您的简历信息用于任何其他用途，也不会与第三方分享。</p>
+                <div class="privacy-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    您的隐私，我们守护
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 联系我们区块 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>联系我们</h2>
+            <div class="contact-content">
+                <form class="contact-form" aria-label="联系表单">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ 区块 -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>AI 简历优化工具如何使用？</h3>
+                    <p>用户上传基本的简历和 JD，AI 分析后输出改进建议，通过多轮对话，最终生成简历的最终版本。整个过程简单快捷，无需专业知识。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>简历优化后如何保证隐私安全？</h3>
+                    <p>简历内容在用户下载完成后自动删除，不保留云端备份，确保用户隐私不被泄露。我们采用严格的数据加密技术，保护您的个人信息安全。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>AI 简历优化工具是免费的吗？</h3>
+                    <p>用户可以免费生成和调整简历，仅最终下载时付费。单篇下载 9.9 元，包月套餐 29.9 元（10 份简历），高级包月套餐 199 元（无限制下载）。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>ATS 优化是什么意思？</h3>
+                    <p>ATS（申请人跟踪系统）是企业用于筛选简历的系统。我们的 AI 简历优化工具会优化简历格式和内容，提高通过 ATS 筛选的概率，增加您的面试机会。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>智能 JD 匹配是如何工作的？</h3>
+                    <p>用户上传简历和招聘岗位的 JD，AI 会分析 JD 中的关键词和要求，然后优化简历内容，使其更匹配岗位需求，提高简历通过率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 AI 简历优化工具. 保留所有权利.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // 表单提交处理
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们会尽快与您联系。');
+            this.reset();
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
