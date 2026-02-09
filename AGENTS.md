@@ -4,10 +4,10 @@
 
 | Agent | Skill | 职责 |
 |-------|-------|------|
-| 入口 Agent（产品专家） | `landing-orchestrator` | 通过产品文档解析和多轮对话深度挖掘需求，生成 demand.md；确认设计路径、编排流程、管理迭代 |
-| 设计大师 | `landing-design-master` | 路径 1、3 主导设计，产出设计规格 |
+| 入口 Agent（产品专家） | `landing-orchestrator` | 通过产品文档解析和多轮对话深度挖掘需求，生成 demand.md；确认设计路径、编排流程、管理迭代；**项目完成后组织项目复盘** |
+| 设计大师 | `landing-design-master` | 路径 1、3 主导设计，产出设计规格；**路径 2 下积极参与，提供具体设计建议** |
 | SEO 专家 | `landing-seo-expert` | 基于 demand.md 生成关键词与 SEO 建议，供前端专家进行搜索引擎优化 |
-| 前端专家 | `landing-frontend-expert` | 路径 2 主导实现；路径 1、3 实现设计规格 |
+| 前端专家 | `landing-frontend-expert` | 路径 2 主导实现；路径 1、3 实现设计规格；**路径 2 下主动参考设计大师建议，提升设计质量** |
 | 评分 Agent | `landing-scorer` | 按固定标准对页面打分，输出结构化评分报告 |
 
 **整合的设计 Skill**：
@@ -33,7 +33,7 @@
 - "路径 3，参考这个网站 [URL]，做一个类似风格的新品介绍页" → 产品专家分析参考并明确创新点
 - "给 tests/20250209-160500/landing.html 打个分" → 评分 Agent
 
-输出到 `tests/YYYYMMDD-HHMMSS/` 目录：新上下文创建新文件夹，每个子文件夹含 `demand.md`（用户需求）、`seo-suggestions.md`（SEO 建议）和生成的页面。**产品专家通过多轮对话和文档解析生成 `demand.md`**，生成前会向用户展示并确认，用户同意后，**SEO 专家基于 `demand.md` 生成 `seo-suggestions.md`**，然后进入生成阶段。**每次生成完成后**，评分 Agent 自动对页面评分，并将报告写入同目录下的 `rating.md`。每次调整生成新文件（`landing.html`、`landing-v2.html` 等）时，会重新评分并更新 `rating.md`。
+输出到 `tests/YYYYMMDD-HHMMSS/` 目录：新上下文创建新文件夹，每个子文件夹含 `demand.md`（用户需求）、`seo-suggestions.md`（SEO 建议）和生成的页面。**产品专家通过多轮对话和文档解析生成 `demand.md`**，生成前会向用户展示并确认，用户同意后，**SEO 专家基于 `demand.md` 生成 `seo-suggestions.md`**，然后进入生成阶段。**每次生成完成后**，评分 Agent 自动对页面评分，并将报告写入同目录下的 `rating.md`。每次调整生成新文件（`landing.html`、`landing-v2.html` 等）时，会重新评分并更新 `rating.md`。**项目完成后**，产品专家作为项目经理角色组织项目复盘，生成 `retrospective.md`（项目复盘报告）。
 
 ---
 
@@ -45,3 +45,5 @@
 2. **数据收集专家**：采集并精炼经典设计语言，存入设计师知识库
 3. ~~**入口 Agent 增强**~~：✅ **已完成** - 入口 Agent 已升级为产品专家，支持文档解析和多轮对话生成 `demand.md`
 4. ~~**SEO 专家**~~：✅ **已完成** - SEO 专家 Agent 已实现，基于 `demand.md` 生成关键词与 SEO 建议，供前端专家进行搜索引擎优化
+5. ~~**项目复盘机制**~~：✅ **已完成** - 项目完成后自动组织项目复盘，识别各 Agent 不足，输出能力提升建议，优化 Agent 技能
+6. ~~**流程优化**~~：✅ **已完成** - 建立项目完成检查清单，强化项目复盘环节，提升需求挖掘深度，增强设计大师在路径 2 下的参与度
